@@ -4,10 +4,13 @@ addProduct({
   id: 1,
   title: 'Product 1',
   createdAt: new Date(),
+  updatedAt: new Date(),
   size: 'S',
   stock: 90,
   category: {
     id: 1,
-    name: 'Category'
+    name: 'Category',
+    createdAt: new Date(),
+    updatedAt: new Date(),
   }
 });
