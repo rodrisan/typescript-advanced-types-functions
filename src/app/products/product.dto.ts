@@ -39,4 +39,7 @@ type exampleRequired = Required<Product>;
 // Readonly
 type exampleReadOnly = Readonly<Product>;
 
-export interface FindProductDto extends Readonly<Partial<Product>>{}
+// export interface FindProductDto extends Readonly<Partial<Product>>{}
+export interface FindProductDto extends Readonly<Partial<Omit<Product, 'tags'>>>{
+  readonly tags: ReadonlyArray<string>;
+}

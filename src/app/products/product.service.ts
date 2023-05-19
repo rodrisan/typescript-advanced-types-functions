@@ -47,5 +47,10 @@ export const findProducts = (dto: FindProductDto): Product[] => {
   // filter
   // dto.color = '0'; // can't do it, because is readonly
   // dto.isNew = false; // can't do it, because is readonly
+
+  // with readonly, disable all this functionality.
+  // dto.tags = [];
+  // dto.tags?.pop();
+  // dto.tags?.push();
   return products;
 }
