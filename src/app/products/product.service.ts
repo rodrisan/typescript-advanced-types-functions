@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { CreateProductDto, UpdateProductDto } from './product.dto';
+import { CreateProductDto, FindProductDto, UpdateProductDto } from './product.dto';
 import { Product } from './product.model'
 
 export const products: Product[] = [];
@@ -41,4 +41,11 @@ export const deleteProduct = (id: number) => {
 
 export const allProducts = () => {
   // code
+}
+
+export const findProducts = (dto: FindProductDto): Product[] => {
+  // filter
+  // dto.color = '0'; // can't do it, because is readonly
+  // dto.isNew = false; // can't do it, because is readonly
+  return products;
 }

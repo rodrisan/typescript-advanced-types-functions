@@ -34,3 +34,9 @@ type exampleRequired = Required<Product>;
 //   readonly createdAt: Date;
 //   updatedAt: Date;
 // }
+
+
+// Readonly
+type exampleReadOnly = Readonly<Product>;
+
+export interface FindProductDto extends Readonly<Partial<Product>>{}
