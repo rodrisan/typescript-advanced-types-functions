@@ -10,3 +10,27 @@ type examplePick = Pick<Product, 'color' | 'image'>;
 //   image: string;
 //   color: string;
 // }
+
+
+// Partial
+// export type UpdateProductDto = Partial<Product>
+export interface UpdateProductDto extends Partial<CreateProductDto>{}
+
+
+// Required
+type exampleRequired = Required<Product>;
+// type exampleRequired = {
+//   title: string;
+//   image: string;
+//   desc: string;
+//   stock: number;
+//   size: Sizes; // This was non-required now it is.
+//   color: string;
+//   price: number;
+//   category: Category;
+//   isNew: boolean;
+//   tags: string[];
+//   readonly id: string | number;
+//   readonly createdAt: Date;
+//   updatedAt: Date;
+// }
